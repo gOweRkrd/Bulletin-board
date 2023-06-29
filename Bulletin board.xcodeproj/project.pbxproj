@@ -7,18 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5072E5182A4DAD0200764240 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072E5172A4DAD0100764240 /* MainViewModel.swift */; };
+		5072E51A2A4DB17300764240 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072E5192A4DB17300764240 /* Bundle+Extension.swift */; };
+		5072E51C2A4ECE0400764240 /* Image + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072E51B2A4ECE0400764240 /* Image + Extension.swift */; };
 		50AC87932A4D7BB80014D45E /* Bulletin_boardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC87922A4D7BB80014D45E /* Bulletin_boardApp.swift */; };
-		50AC87952A4D7BB80014D45E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC87942A4D7BB80014D45E /* ContentView.swift */; };
+		50AC87952A4D7BB80014D45E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC87942A4D7BB80014D45E /* MainView.swift */; };
 		50AC87972A4D7BBA0014D45E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50AC87962A4D7BBA0014D45E /* Assets.xcassets */; };
 		50AC879A2A4D7BBA0014D45E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50AC87992A4D7BBA0014D45E /* Preview Assets.xcassets */; };
+		50AC87A92A4D7DB20014D45E /* ContentSizeCategory+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC87A82A4D7DB20014D45E /* ContentSizeCategory+Extension.swift */; };
+		50AC87AB2A4D7DB90014D45E /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC87AA2A4D7DB90014D45E /* UIColor+Extension.swift */; };
+		50AC87AD2A4D7DC10014D45E /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC87AC2A4D7DC10014D45E /* View+Extension.swift */; };
+		50AC87AF2A4D7DCF0014D45E /* R.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC87AE2A4D7DCF0014D45E /* R.swift */; };
+		50AC87BD2A4D7EEB0014D45E /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC87BC2A4D7EEB0014D45E /* ResponseModel.swift */; };
+		50AC87C02A4D821E0014D45E /* VStack+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC87BF2A4D821E0014D45E /* VStack+Extension.swift */; };
+		50AC87C22A4D82240014D45E /* HStack+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC87C12A4D82240014D45E /* HStack+Extension.swift */; };
+		50AC87C42A4D83430014D45E /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 50AC87C32A4D83430014D45E /* data.json */; };
+		50AC87CE2A4D86CE0014D45E /* SFProDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50AC87CA2A4D86150014D45E /* SFProDisplay-Medium.ttf */; };
+		50AC87CF2A4D86D20014D45E /* SFProDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 50AC87CD2A4D861D0014D45E /* SFProDisplay-Bold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5072E5172A4DAD0100764240 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		5072E5192A4DB17300764240 /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		5072E51B2A4ECE0400764240 /* Image + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image + Extension.swift"; sourceTree = "<group>"; };
 		50AC878F2A4D7BB80014D45E /* Bulletin board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bulletin board.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50AC87922A4D7BB80014D45E /* Bulletin_boardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bulletin_boardApp.swift; sourceTree = "<group>"; };
-		50AC87942A4D7BB80014D45E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		50AC87942A4D7BB80014D45E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		50AC87962A4D7BBA0014D45E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50AC87992A4D7BBA0014D45E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		50AC87A82A4D7DB20014D45E /* ContentSizeCategory+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ContentSizeCategory+Extension.swift"; sourceTree = "<group>"; };
+		50AC87AA2A4D7DB90014D45E /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		50AC87AC2A4D7DC10014D45E /* View+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		50AC87AE2A4D7DCF0014D45E /* R.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.swift; sourceTree = "<group>"; };
+		50AC87B22A4D7E360014D45E /* Bulletin-board-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Bulletin-board-Info.plist"; sourceTree = SOURCE_ROOT; };
+		50AC87BC2A4D7EEB0014D45E /* ResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		50AC87BF2A4D821E0014D45E /* VStack+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VStack+Extension.swift"; sourceTree = "<group>"; };
+		50AC87C12A4D82240014D45E /* HStack+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HStack+Extension.swift"; sourceTree = "<group>"; };
+		50AC87C32A4D83430014D45E /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		50AC87C92A4D86150014D45E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = "Base.lproj/SFProDisplay-Medium.ttf"; sourceTree = "<group>"; };
+		50AC87CC2A4D861D0014D45E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = "Base.lproj/SFProDisplay-Bold.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,11 +78,13 @@
 		50AC87912A4D7BB80014D45E /* Bulletin board */ = {
 			isa = PBXGroup;
 			children = (
+				50AC87B22A4D7E360014D45E /* Bulletin-board-Info.plist */,
 				50AC87A02A4D7BF00014D45E /* App */,
-				50AC87A12A4D7C2B0014D45E /* NetworkService */,
+				50AC87B32A4D7EAB0014D45E /* NetwokService */,
 				50AC87A22A4D7C480014D45E /* Modules */,
-				50AC87A32A4D7C7B0014D45E /* Extensions */,
+				50AC87A72A4D7D8B0014D45E /* Extensions */,
 				50AC87A42A4D7C9A0014D45E /* Resources */,
+				50AC87C32A4D83430014D45E /* data.json */,
 				50AC87982A4D7BBA0014D45E /* Preview Content */,
 			);
 			path = "Bulletin board";
@@ -77,34 +106,54 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		50AC87A12A4D7C2B0014D45E /* NetworkService */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NetworkService;
-			sourceTree = "<group>";
-		};
 		50AC87A22A4D7C480014D45E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				50AC87942A4D7BB80014D45E /* ContentView.swift */,
+				50AC87942A4D7BB80014D45E /* MainView.swift */,
+				5072E5172A4DAD0100764240 /* MainViewModel.swift */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		50AC87A32A4D7C7B0014D45E /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		50AC87A42A4D7C9A0014D45E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				50AC87B02A4D7DEB0014D45E /* Fonts */,
 				50AC87962A4D7BBA0014D45E /* Assets.xcassets */,
+				50AC87AE2A4D7DCF0014D45E /* R.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		50AC87A72A4D7D8B0014D45E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				50AC87A82A4D7DB20014D45E /* ContentSizeCategory+Extension.swift */,
+				5072E51B2A4ECE0400764240 /* Image + Extension.swift */,
+				50AC87BF2A4D821E0014D45E /* VStack+Extension.swift */,
+				50AC87C12A4D82240014D45E /* HStack+Extension.swift */,
+				50AC87AA2A4D7DB90014D45E /* UIColor+Extension.swift */,
+				50AC87AC2A4D7DC10014D45E /* View+Extension.swift */,
+				5072E5192A4DB17300764240 /* Bundle+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		50AC87B02A4D7DEB0014D45E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				50AC87CA2A4D86150014D45E /* SFProDisplay-Medium.ttf */,
+				50AC87CD2A4D861D0014D45E /* SFProDisplay-Bold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		50AC87B32A4D7EAB0014D45E /* NetwokService */ = {
+			isa = PBXGroup;
+			children = (
+				50AC87BC2A4D7EEB0014D45E /* ResponseModel.swift */,
+			);
+			path = NetwokService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,6 +166,7 @@
 				50AC878B2A4D7BB80014D45E /* Sources */,
 				50AC878C2A4D7BB80014D45E /* Frameworks */,
 				50AC878D2A4D7BB80014D45E /* Resources */,
+				50AC87BE2A4D7FBD0014D45E /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -166,23 +216,76 @@
 			buildActionMask = 2147483647;
 			files = (
 				50AC879A2A4D7BBA0014D45E /* Preview Assets.xcassets in Resources */,
+				50AC87CE2A4D86CE0014D45E /* SFProDisplay-Medium.ttf in Resources */,
+				50AC87CF2A4D86D20014D45E /* SFProDisplay-Bold.otf in Resources */,
+				50AC87C42A4D83430014D45E /* data.json in Resources */,
 				50AC87972A4D7BBA0014D45E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		50AC87BE2A4D7FBD0014D45E /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint && swiftlint --fix\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		50AC878B2A4D7BB80014D45E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50AC87952A4D7BB80014D45E /* ContentView.swift in Sources */,
+				5072E51A2A4DB17300764240 /* Bundle+Extension.swift in Sources */,
+				5072E51C2A4ECE0400764240 /* Image + Extension.swift in Sources */,
+				50AC87AF2A4D7DCF0014D45E /* R.swift in Sources */,
+				50AC87BD2A4D7EEB0014D45E /* ResponseModel.swift in Sources */,
+				50AC87A92A4D7DB20014D45E /* ContentSizeCategory+Extension.swift in Sources */,
+				50AC87C22A4D82240014D45E /* HStack+Extension.swift in Sources */,
+				50AC87952A4D7BB80014D45E /* MainView.swift in Sources */,
+				50AC87C02A4D821E0014D45E /* VStack+Extension.swift in Sources */,
+				5072E5182A4DAD0200764240 /* MainViewModel.swift in Sources */,
+				50AC87AD2A4D7DC10014D45E /* View+Extension.swift in Sources */,
 				50AC87932A4D7BB80014D45E /* Bulletin_boardApp.swift in Sources */,
+				50AC87AB2A4D7DB90014D45E /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		50AC87CA2A4D86150014D45E /* SFProDisplay-Medium.ttf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50AC87C92A4D86150014D45E /* Base */,
+			);
+			name = "SFProDisplay-Medium.ttf";
+			sourceTree = "<group>";
+		};
+		50AC87CD2A4D861D0014D45E /* SFProDisplay-Bold.otf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50AC87CC2A4D861D0014D45E /* Base */,
+			);
+			name = "SFProDisplay-Bold.otf";
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		50AC879B2A4D7BBA0014D45E /* Debug */ = {
@@ -309,6 +412,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Bulletin board/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Bulletin-board-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -337,6 +441,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Bulletin board/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Bulletin-board-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

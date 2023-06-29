@@ -4,7 +4,7 @@ import SwiftUI
 struct Bulletin_boardApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }
