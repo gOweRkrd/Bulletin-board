@@ -2,7 +2,7 @@ import SwiftUI
 
 enum SFProDisplay: String {
     case medium = "SFProDisplay-Medium"
-//    case bold = "SFProDisplay-Bold"
+    case bold = "SFProDisplay-Bold"
 }
 
 extension ContentSizeCategory {

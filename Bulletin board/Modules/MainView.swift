@@ -5,7 +5,7 @@ struct MainView: View {
     
     var body: some View {
         ZStack {
-            Color.white.ignoresSafeArea(.all)
+            Color(R.Colors.white).ignoresSafeArea(.all)
             content
                 .onAppear {
                     viewModel.fetchData()
@@ -23,36 +23,51 @@ extension MainView {
             if let response = viewModel.response {
                 dismissImage
                 Text(response.result.title)
-                    .font(.title)
+                    .customFont(SFProDisplay.medium, category: .extraExtraExtraLarge)
+                    .foregroundColor(Color(R.Colors.black))
                     .lineSpacing(5)
                     .padding(.top, 40)
-                
-                List(response.result.list.prefix(2), id: \.id) { item in
-                    HStack {
-                        AsyncImage(url: item.icon.the52X52) { image in
-                            image.resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 52, height: 52)
-                        } placeholder: {
-                            ProgressView()
-                        }
-                        .padding(.top, 10)
-                        .padding(.trailing, 20)
-                        .padding(.bottom, 80)
 
-                        VStack(alignment: .leading, spacing: 10) {
-                            Text(item.title)
-                                .font(.headline)
-                            Text(item.description ?? "")
-                                .font(.subheadline)
-                            Text(item.price)
-                                .font(.headline)
+                ScrollView {
+                    VStack(spacing: 10) {
+                        ForEach(response.result.list.prefix(2), id: \.id) { item in
+                            Button(action: {
+                                
+                            }) {
+                                HStack {
+                                    AsyncImage(url: item.icon.the52X52) { image in
+                                        image.resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(width: 52, height: 52)
+                                    } placeholder: {
+                                        ProgressView()
+                                    }
+                                    .padding(.top, 10)
+                                    .padding([.leading, .trailing], 20)
+                                    .padding(.bottom, 90)
+                                    
+                                    VStack(alignment: .leading, spacing: 15) {
+                                        Text(item.title)
+                                            .customFont(SFProDisplay.medium, category: .extraLarge)
+                                            .foregroundColor(Color(R.Colors.black))
+                                        Text(item.description ?? "")
+                                            .customFont(SFProDisplay.medium, category: .medium)
+                                            .multilineTextAlignment(.leading)
+                                            .lineSpacing(4)
+                                            .foregroundColor(Color(R.Colors.black))
+                                        Text(item.price)
+                                            .customFont(SFProDisplay.medium, category: .extraLarge)
+                                            .foregroundColor(Color(R.Colors.black))
+                                    }
+                                }
+                                .padding(.vertical, 15)
+                                .padding(.trailing, 70)
+                                .frame(maxWidth: .infinity)
+                                .background(Color(R.Colors.lightGray))
+                                .cornerRadius(10)
+                            }
                         }
                     }
-                    .padding(.vertical, 15)
-                    .padding(.trailing, 10)
-                    .padding(.trailing, 20)
-                    .listRowBackground(Color(R.Colors.lightGray))
                 }
                 .cornerRadius(10)
                 .padding(.top, 40)
@@ -65,17 +80,18 @@ extension MainView {
         }
         .padding(.horizontal, 15)
     }
-    
-    var dismissImage: some View {
-        Image("cancel")
-            .foregroundColor(.black)
-            .padding(.top, 10)
-    }
 }
 
 // MARK: - Setup button
 
 extension MainView {
+    
+    var dismissImage: some View {
+        Image("cancel")
+            .foregroundColor(Color(R.Colors.black))
+            .padding(.top, 10)
+    }
+    
     var chooseButton: some View {
         Button(
             action: { },
@@ -86,13 +102,13 @@ extension MainView {
     }
     
     var chooseText: some View {
-        Text("Выбрать")
+        Text(R.MainView.chooseButton)
             .font(.headline)
             .frame(maxWidth: .infinity)
             .padding(.top, 17)
             .padding(.bottom, 17)
-            .background(.blue)
-            .foregroundColor(.white)
+            .background(Color(R.Colors.lightBlue))
+            .foregroundColor(Color(R.Colors.white))
             .cornerRadius(10)
     }
 }

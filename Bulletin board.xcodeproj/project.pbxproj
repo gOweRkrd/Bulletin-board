@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5072E5182A4DAD0200764240 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072E5172A4DAD0100764240 /* MainViewModel.swift */; };
-		5072E51A2A4DB17300764240 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072E5192A4DB17300764240 /* Bundle+Extension.swift */; };
 		50AC87932A4D7BB80014D45E /* Bulletin_boardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC87922A4D7BB80014D45E /* Bulletin_boardApp.swift */; };
 		50AC87952A4D7BB80014D45E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC87942A4D7BB80014D45E /* MainView.swift */; };
 		50AC87972A4D7BBA0014D45E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50AC87962A4D7BBA0014D45E /* Assets.xcassets */; };
@@ -27,7 +26,6 @@
 
 /* Begin PBXFileReference section */
 		5072E5172A4DAD0100764240 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		5072E5192A4DB17300764240 /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		50AC878F2A4D7BB80014D45E /* Bulletin board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bulletin board.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50AC87922A4D7BB80014D45E /* Bulletin_boardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bulletin_boardApp.swift; sourceTree = "<group>"; };
 		50AC87942A4D7BB80014D45E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -82,7 +80,6 @@
 				50AC87A22A4D7C480014D45E /* Modules */,
 				50AC87A72A4D7D8B0014D45E /* Extensions */,
 				50AC87A42A4D7C9A0014D45E /* Resources */,
-				50AC87C32A4D83430014D45E /* data.json */,
 				50AC87982A4D7BBA0014D45E /* Preview Content */,
 			);
 			path = "Bulletin board";
@@ -118,6 +115,7 @@
 			children = (
 				50AC87B02A4D7DEB0014D45E /* Fonts */,
 				50AC87962A4D7BBA0014D45E /* Assets.xcassets */,
+				50AC87C32A4D83430014D45E /* data.json */,
 				50AC87AE2A4D7DCF0014D45E /* R.swift */,
 			);
 			path = Resources;
@@ -131,7 +129,6 @@
 				50AC87C12A4D82240014D45E /* HStack+Extension.swift */,
 				50AC87AA2A4D7DB90014D45E /* UIColor+Extension.swift */,
 				50AC87AC2A4D7DC10014D45E /* View+Extension.swift */,
-				5072E5192A4DB17300764240 /* Bundle+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -248,7 +245,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5072E51A2A4DB17300764240 /* Bundle+Extension.swift in Sources */,
 				50AC87AF2A4D7DCF0014D45E /* R.swift in Sources */,
 				50AC87BD2A4D7EEB0014D45E /* ResponseModel.swift in Sources */,
 				50AC87A92A4D7DB20014D45E /* ContentSizeCategory+Extension.swift in Sources */,
