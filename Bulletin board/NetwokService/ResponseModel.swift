@@ -23,7 +23,7 @@ struct ListItem: Codable {
 
 // MARK: - Icon
 struct Icon: Codable {
-    let the52X52: URL // Изменил тип на URL
+    let the52X52: URL 
 
     enum CodingKeys: String, CodingKey {
         case the52X52 = "52x52"

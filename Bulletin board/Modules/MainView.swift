@@ -39,7 +39,7 @@ extension MainView {
                         .padding(.top, 10)
                         .padding(.trailing, 20)
                         .padding(.bottom, 80)
-    
+
                         VStack(alignment: .leading, spacing: 10) {
                             Text(item.title)
                                 .font(.headline)
@@ -58,8 +58,10 @@ extension MainView {
                 .padding(.top, 40)
                 .listStyle(.plain)
             } else {
-                Text("Loading...")
+                ProgressView()
             }
+            chooseButton
+                .padding(.bottom, 20)
         }
         .padding(.horizontal, 15)
     }
@@ -71,6 +73,29 @@ extension MainView {
     }
 }
 
+// MARK: - Setup button
+
+extension MainView {
+    var chooseButton: some View {
+        Button(
+            action: { },
+            label: { chooseText }
+        )
+        .padding(.top, 10)
+        .padding(.horizontal, 10)
+    }
+    
+    var chooseText: some View {
+        Text("Выбрать")
+            .font(.headline)
+            .frame(maxWidth: .infinity)
+            .padding(.top, 17)
+            .padding(.bottom, 17)
+            .background(.blue)
+            .foregroundColor(.white)
+            .cornerRadius(10)
+    }
+}
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
