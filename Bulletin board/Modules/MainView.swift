@@ -27,17 +27,31 @@ extension MainView {
                     .lineSpacing(5)
                     .padding(.top, 40)
                 
-                List(response.result.list, id: \.id) { item in
-                    VStack(alignment: .leading, spacing: 10) {
-                        Text(item.title)
-                            .font(.headline)
-                        Text(item.description ?? "")
-                            .font(.subheadline)
-                        Text(item.price)
-                            .font(.headline)
+                List(response.result.list.prefix(2), id: \.id) { item in
+                    HStack {
+                        AsyncImage(url: item.icon.the52X52) { image in
+                            image.resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 52, height: 52)
+                        } placeholder: {
+                            ProgressView()
+                        }
+                        .padding(.top, 10)
+                        .padding(.trailing, 20)
+                        .padding(.bottom, 80)
+    
+                        VStack(alignment: .leading, spacing: 10) {
+                            Text(item.title)
+                                .font(.headline)
+                            Text(item.description ?? "")
+                                .font(.subheadline)
+                            Text(item.price)
+                                .font(.headline)
+                        }
                     }
                     .padding(.vertical, 15)
-                    .padding([.leading, .trailing], 50)
+                    .padding(.trailing, 10)
+                    .padding(.trailing, 20)
                     .listRowBackground(Color(R.Colors.lightGray))
                 }
                 .cornerRadius(10)
