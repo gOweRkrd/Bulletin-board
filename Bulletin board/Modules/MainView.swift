@@ -27,12 +27,12 @@ extension MainView {
                     .foregroundColor(Color(R.Colors.black))
                     .lineSpacing(5)
                     .padding(.top, 40)
-
+                
                 ScrollView {
                     VStack(spacing: 10) {
                         ForEach(response.result.list.prefix(2), id: \.id) { item in
                             Button(action: {
-                                
+                                viewModel.toggleSelection(for: item)
                             }) {
                                 HStack {
                                     AsyncImage(url: item.icon.the52X52) { image in
@@ -59,9 +59,15 @@ extension MainView {
                                             .customFont(SFProDisplay.medium, category: .extraLarge)
                                             .foregroundColor(Color(R.Colors.black))
                                     }
+                                    Image(systemName: item.isSelected ? "checkmark.circle.fill" : "")
+                                        .font(.system(size: 30))
+                                        .foregroundColor(item.isSelected ? Color(R.Colors.lightBlue) : nil)
+                                        .padding(.leading, 10)
+                                        .padding(.trailing, 20)
+                                        .padding(.bottom, 110)
+                                    
                                 }
                                 .padding(.vertical, 15)
-                                .padding(.trailing, 70)
                                 .frame(maxWidth: .infinity)
                                 .background(Color(R.Colors.lightGray))
                                 .cornerRadius(10)
@@ -93,8 +99,15 @@ extension MainView {
     }
     
     var chooseButton: some View {
+        
         Button(
-            action: { },
+            action: {
+                let selectedItems = viewModel.response?.result.list.filter { $0.isSelected }
+                let selectedTitles = selectedItems?.map { $0.title } ?? []
+                let alertMessage = selectedTitles.joined(separator: ", ")
+                showAlert(message: alertMessage)
+            },
+            
             label: { chooseText }
         )
         .padding(.top, 10)
@@ -111,7 +124,18 @@ extension MainView {
             .foregroundColor(Color(R.Colors.white))
             .cornerRadius(10)
     }
+    
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: "Выбранные услуги", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let rootViewController = windowScene.windows.first?.rootViewController {
+            rootViewController.present(alert, animated: true, completion: nil)
+        }
+    }
 }
+
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()

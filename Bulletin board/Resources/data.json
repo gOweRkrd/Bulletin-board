@@ -23,7 +23,7 @@
           "52x52": "https://www.avito.ru/s/common/components/monetization/icons/apps/vas-highlight-52.png"
         },
         "price": "299 ₽",
-        "isSelected": true
+        "isSelected": false
       },
       {
         "id": "3",

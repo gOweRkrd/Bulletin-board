@@ -3,13 +3,13 @@ import SwiftUI
 // MARK: - Response
 struct Response: Codable {
     let status: String
-    let result: Result
+    var result: Result
 }
 
 // MARK: - Result
 struct Result: Codable {
     let title, actionTitle, selectedActionTitle: String
-    let list: [ListItem]
+    var list: [ListItem]
 }
 
 // MARK: - ListItem
@@ -18,7 +18,7 @@ struct ListItem: Codable {
     let description: String?
     let icon: Icon
     let price: String
-    let isSelected: Bool
+    var isSelected: Bool
 }
 
 // MARK: - Icon
