@@ -1,19 +1,19 @@
 import SwiftUI
 
 // MARK: - Response
-struct Response: Codable {
+struct Response: Decodable {
     let status: String
     var result: Result
 }
 
 // MARK: - Result
-struct Result: Codable {
+struct Result: Decodable {
     let title, actionTitle, selectedActionTitle: String
     var list: [ListItem]
 }
 
 // MARK: - ListItem
-struct ListItem: Codable {
+struct ListItem: Decodable {
     let id, title: String
     let description: String?
     let icon: Icon
@@ -22,7 +22,7 @@ struct ListItem: Codable {
 }
 
 // MARK: - Icon
-struct Icon: Codable {
+struct Icon: Decodable {
     let the52X52: URL 
 
     enum CodingKeys: String, CodingKey {
