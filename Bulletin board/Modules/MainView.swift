@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct MainView: View {
-    @StateObject private var viewModel = ViewModel()
+    @StateObject private var viewModel = MainViewModel()
     
     var body: some View {
         ZStack {
@@ -22,11 +22,8 @@ extension MainView {
         VStack(alignment: .leading) {
             if let response = viewModel.response {
                 dismissImage
-                Text(response.result.title)
-                    .customFont(SFProDisplay.medium, category: .extraExtraExtraLarge)
-                    .foregroundColor(Color(R.Colors.black))
-                    .lineSpacing(5)
-                    .padding(.top, 40)
+                
+                title(title: response.result.title)
                 
                 ScrollView {
                     VStack(spacing: 10) {
@@ -34,47 +31,23 @@ extension MainView {
                             .prefix(2)
                             .indices, id: \.self) { index in
                                 let item = response.result.list[index]
-                                Button(action: {
-                                    viewModel.toggleSelection(for: item)
-                                }) {
-                                    HStack {
-                                        AsyncImage(url: item.icon.the52X52) { image in
-                                            image.resizable()
-                                                .aspectRatio(contentMode: .fit)
-                                                .frame(width: 52, height: 52)
-                                        } placeholder: {
-                                            ProgressView()
+                                
+                                Button(
+                                    action: { viewModel.toggleSelection(for: item) },
+                                    label: {
+                                        HStack {
+                                            iconImage(item)
+                                            
+                                            tableText(item)
+                                            
+                                            viewModel.marker(item: item)
                                         }
-                                        .padding(.top, 10)
-                                        .padding([.leading, .trailing], 20)
-                                        .padding(.bottom, 90)
-                                        
-                                        VStack(alignment: .leading, spacing: 15) {
-                                            Text(item.title)
-                                                .customFont(SFProDisplay.medium, category: .extraLarge)
-                                                .foregroundColor(Color(R.Colors.black))
-                                            Text(item.description ?? "")
-                                                .customFont(SFProDisplay.medium, category: .medium)
-                                                .multilineTextAlignment(.leading)
-                                                .lineSpacing(4)
-                                                .foregroundColor(Color(R.Colors.black))
-                                            Text(item.price)
-                                                .customFont(SFProDisplay.medium, category: .extraLarge)
-                                                .foregroundColor(Color(R.Colors.black))
-                                        }
-                                        Image(systemName: item.isSelected ? "checkmark.circle.fill" : "")
-                                            .font(.system(size: 30))
-                                            .foregroundColor(item.isSelected ? Color(R.Colors.lightBlue) : nil)
-                                            .padding(.leading, 10)
-                                            .padding(.trailing, 20)
-                                            .padding(.bottom, 110)
-                                        
+                                        .padding(.vertical, 15)
+                                        .frame(maxWidth: .infinity)
+                                        .background(Color(R.Colors.lightGray))
+                                        .cornerRadius(10)
                                     }
-                                    .padding(.vertical, 15)
-                                    .frame(maxWidth: .infinity)
-                                    .background(Color(R.Colors.lightGray))
-                                    .cornerRadius(10)
-                                }
+                                )
                         }
                     }
                 }
@@ -88,6 +61,46 @@ extension MainView {
         }
         .padding(.horizontal, 15)
     }
+    
+    func title(title: String) -> some View {
+        Text(title)
+            .customFont(SFProDisplay.bold, category: .extraExtraExtraLarge)
+            .foregroundColor(Color(R.Colors.black))
+            .lineSpacing(5)
+            .padding(.top, 40)
+    }
+    
+    @ViewBuilder
+    func tableText(_ item: ListItem) -> some View {
+        VStack(alignment: .leading, spacing: 15) {
+            Text(item.title)
+                .customFont(SFProDisplay.bold, category: .extraLarge)
+                .foregroundColor(Color(R.Colors.black))
+            Text(item.description ?? "")
+                .customFont(SFProDisplay.medium, category: .medium)
+                .multilineTextAlignment(.leading)
+                .lineSpacing(4)
+                .foregroundColor(Color(R.Colors.black))
+            Text(item.price)
+                .customFont(SFProDisplay.bold, category: .extraLarge)
+                .foregroundColor(Color(R.Colors.black))
+        }
+    }
+    
+    func iconImage(_ item: ListItem) -> some View {
+        AsyncImage(
+            url: item.icon.the52X52
+        ) { image in
+        image.resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 52, height: 52)
+        } placeholder: {
+            ProgressView()
+        }
+        .padding(.top, 10)
+        .padding([.leading, .trailing], 20)
+        .padding(.bottom, 90)
+    }
 }
 
 // MARK: - Setup button
@@ -96,7 +109,10 @@ extension MainView {
     
     var dismissImage: some View {
         Image("cancel")
+            .frame(width: 40, height: 40)
             .foregroundColor(Color(R.Colors.black))
+            .background(Color(R.Colors.lightGray))
+            .clipShape(Capsule())
             .padding(.top, 10)
     }
     

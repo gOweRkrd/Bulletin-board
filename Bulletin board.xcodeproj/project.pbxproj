@@ -20,8 +20,11 @@
 		50AC87C02A4D821E0014D45E /* VStack+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC87BF2A4D821E0014D45E /* VStack+Extension.swift */; };
 		50AC87C22A4D82240014D45E /* HStack+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC87C12A4D82240014D45E /* HStack+Extension.swift */; };
 		50AC87C42A4D83430014D45E /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 50AC87C32A4D83430014D45E /* data.json */; };
-		50AC87CE2A4D86CE0014D45E /* SFProDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50AC87CA2A4D86150014D45E /* SFProDisplay-Medium.ttf */; };
-		50AC87CF2A4D86D20014D45E /* SFProDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 50AC87CD2A4D861D0014D45E /* SFProDisplay-Bold.otf */; };
+		50F39A832A51806D00F5CBB0 /* SFProDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 50F39A822A51806D00F5CBB0 /* SFProDisplay-Bold.otf */; };
+		50F39A852A51807900F5CBB0 /* SFProRounded-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 50F39A842A51807900F5CBB0 /* SFProRounded-Semibold.otf */; };
+		50F39A872A51808E00F5CBB0 /* SFProDisplay-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 50F39A862A51808D00F5CBB0 /* SFProDisplay-Regular.otf */; };
+		50F39A882A5180FE00F5CBB0 /* Bulletin-board-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50AC87B22A4D7E360014D45E /* Bulletin-board-Info.plist */; };
+		50F39A8A2A51826F00F5CBB0 /* SFProDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 50F39A892A51826F00F5CBB0 /* SFProDisplay-Medium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,8 +43,10 @@
 		50AC87BF2A4D821E0014D45E /* VStack+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VStack+Extension.swift"; sourceTree = "<group>"; };
 		50AC87C12A4D82240014D45E /* HStack+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HStack+Extension.swift"; sourceTree = "<group>"; };
 		50AC87C32A4D83430014D45E /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
-		50AC87C92A4D86150014D45E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = "Base.lproj/SFProDisplay-Medium.ttf"; sourceTree = "<group>"; };
-		50AC87CC2A4D861D0014D45E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = "Base.lproj/SFProDisplay-Bold.otf"; sourceTree = "<group>"; };
+		50F39A822A51806D00F5CBB0 /* SFProDisplay-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.otf"; sourceTree = "<group>"; };
+		50F39A842A51807900F5CBB0 /* SFProRounded-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProRounded-Semibold.otf"; sourceTree = "<group>"; };
+		50F39A862A51808D00F5CBB0 /* SFProDisplay-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.otf"; sourceTree = "<group>"; };
+		50F39A892A51826F00F5CBB0 /* SFProDisplay-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Medium.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,8 +141,10 @@
 		50AC87B02A4D7DEB0014D45E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				50AC87CA2A4D86150014D45E /* SFProDisplay-Medium.ttf */,
-				50AC87CD2A4D861D0014D45E /* SFProDisplay-Bold.otf */,
+				50F39A892A51826F00F5CBB0 /* SFProDisplay-Medium.otf */,
+				50F39A822A51806D00F5CBB0 /* SFProDisplay-Bold.otf */,
+				50F39A862A51808D00F5CBB0 /* SFProDisplay-Regular.otf */,
+				50F39A842A51807900F5CBB0 /* SFProRounded-Semibold.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -209,10 +216,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50F39A882A5180FE00F5CBB0 /* Bulletin-board-Info.plist in Resources */,
 				50AC879A2A4D7BBA0014D45E /* Preview Assets.xcassets in Resources */,
-				50AC87CE2A4D86CE0014D45E /* SFProDisplay-Medium.ttf in Resources */,
-				50AC87CF2A4D86D20014D45E /* SFProDisplay-Bold.otf in Resources */,
+				50F39A832A51806D00F5CBB0 /* SFProDisplay-Bold.otf in Resources */,
+				50F39A852A51807900F5CBB0 /* SFProRounded-Semibold.otf in Resources */,
+				50F39A8A2A51826F00F5CBB0 /* SFProDisplay-Medium.otf in Resources */,
 				50AC87C42A4D83430014D45E /* data.json in Resources */,
+				50F39A872A51808E00F5CBB0 /* SFProDisplay-Regular.otf in Resources */,
 				50AC87972A4D7BBA0014D45E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,25 +269,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		50AC87CA2A4D86150014D45E /* SFProDisplay-Medium.ttf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				50AC87C92A4D86150014D45E /* Base */,
-			);
-			name = "SFProDisplay-Medium.ttf";
-			sourceTree = "<group>";
-		};
-		50AC87CD2A4D861D0014D45E /* SFProDisplay-Bold.otf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				50AC87CC2A4D861D0014D45E /* Base */,
-			);
-			name = "SFProDisplay-Bold.otf";
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		50AC879B2A4D7BBA0014D45E /* Debug */ = {

@@ -1,6 +1,6 @@
 import SwiftUI
 
-final class ViewModel: ObservableObject {
+final class MainViewModel: ObservableObject {
     
     @Published var response: Response?
     @Published var selectedIndex: Int?
@@ -27,6 +27,20 @@ final class ViewModel: ObservableObject {
             selectedIndex = index
         }
     }
+    
+    func marker(item: ListItem) -> some View {
+        Image(systemName: item.isSelected ? "checkmark.circle.fill" : "")
+            .font(.system(size: 30))
+            .foregroundColor(item.isSelected ? Color(R.Colors.lightBlue) : nil)
+            .padding(.leading, 10)
+            .padding(.trailing, 20)
+            .padding(.bottom, 110)
+    }
+}
+
+// MARK: - Setup alert
+
+extension MainViewModel {
     
     func actionAlert() {
         let selectedItems = response?.result.list.filter { $0.isSelected }
