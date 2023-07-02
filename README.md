@@ -10,5 +10,6 @@ Visual mode: dark/ light
 
 ### Demonstration of the operation of screen and the operation of the application:
 
-<img width="334" src="https://github.com/gOweRkrd/Bulletin-board/assets/110721351/7992ee92-4a5d-4dd4-8a81-e91b4ac731f7">
+<img width="334" src="https://github.com/gOweRkrd/Bulletin-board/assets/110721351/6551ff3b-8cfe-4c33-b09c-c7d824529810">
+
 
